@@ -1,0 +1,17 @@
+cmake_minimum_required(VERSION 3.17)
+project(a10_915_Ploscar_Andreea-1)
+
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
+include_directories(.)
+set(CMAKE_PREFIX_PATH "/Users/andreeaploscar/Qt/5.15.2/clang_64/lib/cmake")
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+add_executable(a10_915_Ploscar_Andreea-1 main.cpp Gui.cpp Gui.h Movie.cpp Movie.h Exception.cpp Exception.h Repository.cpp Repository.h Service.cpp Service.h Validator.cpp Validator.h Test.cpp Test.h UserTableModel.cpp UserTableModel.h AdminTableModel.cpp AdminTableModel.h Delegate.cpp Delegate.h UndoService.cpp UndoService.h UndoRedo.cpp UndoRedo.h UndoRedoUser.cpp UndoRedoUser.h UndoRedoServiceUser.cpp UndoRedoServiceUser.h)
+set(QT_VERSION 5)
+set(REQUIRED_LIBS Core Gui Widgets Charts)
+set(REQUIRED_LIBS_QUALIFIED Qt5::Core Qt5::Gui Qt5::Widgets Qt5::Charts)
+find_package(Qt${QT_VERSION} COMPONENTS ${REQUIRED_LIBS} REQUIRED)
+target_link_libraries(${PROJECT_NAME} ${REQUIRED_LIBS_QUALIFIED})
+
